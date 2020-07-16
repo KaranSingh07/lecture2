@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %}
+		{% endblock %}
+	</title>
+	<style type="text/css">
+		
+		{% block style %}
+		{% endblock %}
+		body{
+			font-family: sans-serif;
+		}
+		h1{
+			color: teal;
+			margin-left: 2%;
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		{% block heading %}
+		{% endblock %}
+	</h1>
+	<hr>
+	{% block body %}
+	{% endblock %}
+</body>
+</html>

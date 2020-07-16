@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+	Notes without Sessions
+{% endblock %}
+
+{% block heading %}
+	Notes
+{% endblock %}
+
+{% block body %}
+	<ol>
+		{% for note in notes %}
+			<li> {{note}} </li>
+		{% endfor %}
+	</ol>
+
+	<form action="{{ url_for('index') }}" method="POST">
+		<input type="text" name="note" placeholder="Enter your note here">
+		<button>Add Note</button>
+	</form>
+	
+{% endblock %}

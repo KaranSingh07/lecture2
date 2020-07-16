@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Is it the day?</title>
+
+	<style>
+		body{
+			text-align: center;
+			margin: 50px;
+		}
+	</style>
+</head>
+<body>
+	{% if answer %}
+		<h1>Yes, it is {{user_day}}!</h1>
+	{% else %}
+		<h1>No, it is not {{user_day}}.</h1>
+	{% endif %}
+</body>
+</html>
+
+<!-- Checking conditions in the HTML code. -->

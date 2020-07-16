@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	My Form
+{% endblock %}
+
+{% block heading %}
+	User form
+{% endblock %}
+
+{% block body %}
+	<form action="{{url_for('hello')}}" method="post">
+		<input type="text" name="username" placeholder="Enter your name">
+		<button>Submit</button>
+	</form>
+
+{% endblock %}
+
+<!-- We can also submit forms using GET method, but you should always use post method for submitting forms, because in GET method, senstivite information like password is visible in the URL whether in POST method, URL doesn't contain any form data.

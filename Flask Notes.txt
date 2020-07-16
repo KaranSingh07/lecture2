@@ -1,0 +1,56 @@
+Flask is micro framework for web development written in Python.
+
+@app.route("/")
+def index():
+	return "Hello, World!"
+
+	On default page("/"), run the function immediately below this.
+
+flask run
+	Run the server flask
+
+	If doesn't start, do these...
+
+		$env:FLASK_ENV="development"
+		$env:FLASK_APP="application.py"
+
+		**
+		For UNIX/Git bash...
+		export FLASK_ENV=development
+		export FLASK_APP=application.py
+		**
+		application.py : name of python file
+
+
+To render a whole HTML file...
+
+1. Create a directory named templates.
+2. Put your HTML files in templates directory.
+
+!!---Lines to add in code---!!
+
+	import render_template from flask
+
+	return render_template(<<file_name.html>>)
+
+
+Linking two python functions...
+
+1. Create two functions, each one calling a different HTML file.
+2. Use anchor tag as follows...
+	<a href = "{{url_for('another_fn')}} " > Go to another page... </a>	
+
+	NOTE: another_fn is the name of the function to be called when this link is clicked.
+
+
+Defining a layout to stop repeatation of your code...
+
+	See the inheritance folder. It's working is exactly the same as URLS, but using flask inheritance.
+
+
+!!-- SESSIONS --!!
+	Sessions are specific data of a user. Let's say we want a website storing notes for different different persons.
+	We must have to display and edit the notes of current user, without revealing or affecting the notes of other.
+
+	If we do this without sessions, see what happens in the "Session/notes without sessions" project.
+	And ofcourse, to see the magic of Sessions, go to the "Session/notes with sessions" project.
